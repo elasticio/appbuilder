@@ -1,4 +1,4 @@
-FROM elastic/cedarish
+FROM elasticio/cedarish
 
 RUN useradd slugbuilder --home-dir /app
 
