@@ -1,4 +1,4 @@
-FROM elastic/stack
+FROM elastic/cedarish
 
 RUN useradd slugbuilder --home-dir /app
 
