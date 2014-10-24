@@ -28,7 +28,7 @@ passed via stdin. So let's run it from a git repo and use `git archive` to
 produce a tar:
 
 	$ id=$(git archive master | docker run -i -a stdin elasticio/appbuilder)
-	$ docker wait $id
+	$ docker attach $id
 	$ docker cp $id:/tmp/slug.tgz .
 
 We run slugbuilder, wait for it to finish using the id it gave us, then copies
