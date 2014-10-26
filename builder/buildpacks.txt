@@ -1,7 +1,6 @@
 https://github.com/zubairov/heroku-buildpack-nodejs-grunt
 https://github.com/ddollar/heroku-buildpack-multi.git#93505719
 https://github.com/heroku/heroku-buildpack-ruby.git#v126
-https://github.com/heroku/heroku-buildpack-nodejs.git#v60
 https://github.com/heroku/heroku-buildpack-clojure.git#8ae65497
 https://github.com/heroku/heroku-buildpack-python.git#16a07abd
 https://github.com/heroku/heroku-buildpack-java.git#063595f8
