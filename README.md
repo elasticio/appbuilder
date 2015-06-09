@@ -31,6 +31,11 @@ produce a tar:
 	$ docker attach $id
 	$ docker cp $id:/tmp/slug.tgz .
 
+If you want to use a custom Buildpack just add ```-e``` parameter:
+```
+	$ id=$(git archive master | docker run -i -e "BUILDPACK_URL=https://github.com/elasticio/heroku-buildpack-nodejs-grunt.git" -a stdin elasticio/appbuilder)
+```
+
 We run slugbuilder, wait for it to finish using the id it gave us, then copies
 out the slug artifact into the current directory. If we attached to the
 container with `docker attach` we could also see the build output as you would
