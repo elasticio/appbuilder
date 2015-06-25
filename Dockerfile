@@ -11,3 +11,4 @@ RUN xargs -L 1 /tmp/builder/install-buildpack /tmp/buildpacks < /tmp/builder/bui
 ENTRYPOINT ["/tmp/builder/build.sh"]
 CMD []
 USER slugbuilder
+
