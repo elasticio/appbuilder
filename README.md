@@ -41,12 +41,12 @@ out the slug artifact into the current directory. If we attached to the
 container with `docker attach` we could also see the build output as you would
 with Heroku. We can also *just* see the build output by running it with stdout:
 
-	$ git archive master | docker run -i -a stdin -a stdout elasticio/appbuilder
+	$ git archive master | docker run -i -a stdin -a stdout -a stderr elasticio/appbuilder
 
 We still have to look up the id and copy the slug out of the container, but
 there's an easier way!
 
-	$ git archive master | docker run -i -a stdin -a stdout elasticio/appbuilder - > myslug.tgz
+	$ git archive master | docker run -i -a stdin -a stdout -a stderr elasticio/appbuilder - > myslug.tgz
 
 By running with the `-` argument, it will send all build output to stderr (which
 we didn't attach here) and then spit out the slug to stdout, which as you can
@@ -56,7 +56,7 @@ Lastly, you can also have it PUT the slug somewhere via HTTP if you give it
 a URL as an argument. This lets us specify a place to put it *and* get the build
 output via stdout:
 
-	$ git archive master | docker run -i -a stdin -a stdout elasticio/appbuilder http://fileserver/path/for/myslug.tgz
+	$ git archive master | docker run -i -a stdin -a stdout -a stderr elasticio/appbuilder http://fileserver/path/for/myslug.tgz
 
 ## Caching
 
