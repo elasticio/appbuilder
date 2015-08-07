@@ -22,6 +22,7 @@ mkdir -p $cache_root
 mkdir -p $buildpack_root
 mkdir -p $build_root/.profile.d
 
+echo "mkdir"
 function output_redirect() {
 	if [[ "$slug_file" == "-" ]]; then
 		cat - 1>&2
@@ -46,11 +47,12 @@ function ensure_indent() {
       echo $'\e[1G      ' "$line" | output_redirect
     fi
 
-  done 
+  done
 }
 
 cd $app_dir
 
+echo "cat | tar -xm"
 ## Load source from STDIN
 cat | tar -xm
 
@@ -102,12 +104,14 @@ if [[ -n "$selected_buildpack" ]]; then
 	exit 1
 fi
 
+echo_title "Compiling buildpack..."
 ## Buildpack compile
 if [[ -f "$env_cookie" ]]; then
   $selected_buildpack/bin/compile "$build_root" "$cache_root" "$env_dir" | ensure_indent
 else
   $selected_buildpack/bin/compile "$build_root" "$cache_root" | ensure_indent
 fi
+echo_title "Finished compiling buildpack"
 
 $selected_buildpack/bin/release "$build_root" "$cache_root" > $build_root/.release
 
