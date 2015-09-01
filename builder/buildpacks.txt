@@ -1,6 +1,6 @@
 https://github.com/elasticio/elasticio-buildpack-nodejs#5414d2d7d
 https://github.com/elasticio/elasticio-buildpack-nodejs-original
-https://github.com/elasticio/elasticio-buildpack-gradle
+https://github.com/elasticio/elasticio-buildpack-gradle#fixes_igor
 https://github.com/ddollar/heroku-buildpack-multi.git#93505719
 https://github.com/heroku/heroku-buildpack-ruby.git#v126
 https://github.com/heroku/heroku-buildpack-clojure.git#8ae65497
