@@ -110,7 +110,8 @@ if [[ -f "$env_cookie" ]]; then
   echo_normal "Passing build_root=$build_root, cache_root=$cache_root and env_dir=$env_dir"
   $selected_buildpack/bin/compile "$build_root" "$cache_root" "$env_dir" | ensure_indent
 else
-  echo_normal "Passing build_root=$build_root and cache_root=$cache_root"
+  echo_normal "Build root dir: $build_root"
+  echo_normal "Cache root dir: $cache_root"
   $selected_buildpack/bin/compile "$build_root" "$cache_root" | ensure_indent
 fi
 echo_title "Finished compiling buildpack"
