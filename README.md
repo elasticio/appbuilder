@@ -83,4 +83,3 @@ The container image is based on [cedarish](/util/cedarish), an image that
 emulates the Heroku Cedar stack environment. All buildpacks should have
 everything they need to run in this environment, but if something is missing it
 should be added to cedarish.
-
