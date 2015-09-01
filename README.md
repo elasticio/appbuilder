@@ -3,7 +3,7 @@
 A tool that uses [Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
 to produce a Heroku-like
 [slug](https://devcenter.heroku.com/articles/slug-compiler) given some
-application source.
+application source. 
 
 ## What does it do exactly?
 
