@@ -1,3 +1,3 @@
-https://github.com/elasticio/elasticio-buildpack-nodejs#a76867c
+https://github.com/elasticio/elasticio-buildpack-nodejs#3724ec2
 https://github.com/elasticio/elasticio-buildpack-nodejs-original
 https://github.com/elasticio/elasticio-buildpack-gradle#c479a8f
