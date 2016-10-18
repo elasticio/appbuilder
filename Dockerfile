@@ -1,4 +1,4 @@
-FROM elasticio/cedarish:jdk8_experimental
+FROM elasticio/cedarish
 
 RUN useradd slugbuilder --home-dir /app
 
