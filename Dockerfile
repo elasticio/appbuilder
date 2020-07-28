@@ -1,4 +1,4 @@
-FROM elasticio/cedarish:20.31
+FROM elasticio/cedarish:2.0.0
 
 RUN useradd slugbuilder --home-dir /app
 
