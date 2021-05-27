@@ -22,7 +22,6 @@ mkdir -p $cache_root
 mkdir -p $buildpack_root
 mkdir -p $build_root/.profile.d
 
-echo "mkdir"
 function output_redirect() {
 	if [[ "$slug_file" == "-" ]]; then
 		cat - 1>&2
@@ -52,7 +51,6 @@ function ensure_indent() {
 
 cd $app_dir
 
-echo "cat | tar -xm"
 ## Load source from STDIN
 cat | tar -xm
 
